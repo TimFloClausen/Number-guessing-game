@@ -21,7 +21,7 @@ while zaehler < 3:
             print("The number you are looking for is smaller")
         else:
             print(f"Die gesuchte Zahl war: {zahl}")
-            pygame.mixer.music.load("Zahlen-Ratespiel 1.0/Victory Sound Effect.mp3")
+            pygame.mixer.music.load("Victory Sound Effect.mp3")
             pygame.mixer.music.play()
 
             while pygame.mixer.music.get_busy():
@@ -30,7 +30,7 @@ while zaehler < 3:
 
 if zaehler == 3:
     print(f"Hahahaha, you lost, you noob! The number you were looking for was: {zahl} ")
-    pygame.mixer.music.load("Zahlen-Ratespiel 1.0/Sad Trombone - Sound Effect (HD).mp3")
+    pygame.mixer.music.load("Sad Trombone - Sound Effect (HD).mp3")
     pygame.mixer.music.play()
 
     while pygame.mixer.music.get_busy():
