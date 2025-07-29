@@ -6,19 +6,19 @@ pygame.mixer.init()
 zahl = randint(0, 10)
 zaehler = 0
 
-print("Zahlen-Ratespiel")
+print("Number guessing game")
 
 while zaehler < 3:
-    eingabe = int(input("Gebe deine Zahl ein: "))
+    eingabe = int(input("Enter your number: "))
     if eingabe > 10:
-        print("Zahl über 10, Eingabe wurde nicht gewertet")
+        print("Number over 10, input was not counted")
     else:
         if eingabe < zahl:
             zaehler += 1
-            print("Die gesuchte Zahl ist grösser")
+            print("The number you are looking for is greater")
         elif eingabe > zahl:
             zaehler += 1
-            print("Die gesuchte Zahl ist kleiner")
+            print("The number you are looking for is smaller")
         else:
             print(f"Die gesuchte Zahl war: {zahl}")
             pygame.mixer.music.load("Zahlen-Ratespiel 1.0/Victory Sound Effect.mp3")
@@ -29,7 +29,7 @@ while zaehler < 3:
             break
 
 if zaehler == 3:
-    print(f"Hahahaha, Du hast verloren du Noob! Die gesuchte Zahl war: {zahl} ")
+    print(f"Hahahaha, you lost, you noob! The number you were looking for was: {zahl} ")
     pygame.mixer.music.load("Zahlen-Ratespiel 1.0/Sad Trombone - Sound Effect (HD).mp3")
     pygame.mixer.music.play()
 
